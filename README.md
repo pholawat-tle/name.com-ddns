@@ -56,9 +56,24 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-1. Clone the repo
-   `sh npm run start `
-   _The application is still in development._
+1. In the application folder, copy the .env.example file and create a file called .env
+    ```sh
+    cp .env.example .env
+    ```
+2. Open .env with a text editor of your choice and correct the environment variables
+    ```
+    domainName=<--YOUR DOMAIN NAME-->
+    namedotcom_username=<--YOUR NAME.COM USERNAME-->
+    namedotcom_apiToken=<--YOUR NAME.COM API TOKEN-->
+    ```
+3. Start the application with **npm**
+    ```sh
+    npm run start
+    ```
+    _or with **Docker**_
+    ```sh
+    docker-compose up
+    ```
 
 <!-- ROADMAP -->
 
@@ -66,7 +81,7 @@ This is an example of how to list things you need to use the software and how to
 
 -   [x] Set up a cron job
 -   [x] Retrieve Public IP function
--   [ ] Update Name.com API when Public IP change
+-   [x] Update Name.com API when Public IP change
 
 <!-- LICENSE -->
 
