@@ -9,6 +9,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "axios": "^0.21.1",
+        "dotenv": "^9.0.2",
         "node-cron": "^3.0.0",
         "public-ip": "^4.0.3"
     }
