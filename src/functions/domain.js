@@ -55,8 +55,18 @@ module.exports = class Domain {
                         },
                     }
                 )
-                .then((res) => resolve(null))
-                .catch((err) => resolve(err));
+                .then((res) => {
+                    console.log(
+                        `[ ${new Date().toLocaleString()} ] Successfully update ${recordName} Record with IP ${newIP}`
+                    );
+                    resolve(null);
+                })
+                .catch((err) => {
+                    console.log(
+                        `[ ${new Date().toLocaleString()} ] Failed to update ${recordName} Record with IP ${newIP}`
+                    );
+                    resolve(err);
+                });
         });
     }
 
